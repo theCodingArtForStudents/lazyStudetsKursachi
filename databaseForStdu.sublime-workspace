@@ -98,11 +98,10 @@
 			}
 		},
 		{
-			"file": "databaseForStdu.sublime-project",
+			"file": "inputmanager.h",
 			"settings":
 			{
-				"buffer_size": 911,
-				"encoding": "UTF-8",
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -245,7 +244,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -308,40 +307,38 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "databaseForStdu.sublime-project",
-					"semi_transient": false,
+					"file": "inputmanager.h",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 911,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								426,
-								426
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"SL.46.region_keys":
+							"SL.60.region_keys":
 							[
 							],
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/C++/C++.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
