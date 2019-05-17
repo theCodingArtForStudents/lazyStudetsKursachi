@@ -1,0 +1,440 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"serv",
+				"servaddr"
+			],
+			[
+				"in",
+				"include\t(udpSrv.sublime-project)"
+			],
+			[
+				"i",
+				"include\t(main.c)"
+			],
+			[
+				"main",
+				"main.o"
+			],
+			[
+				"li",
+				"linux/"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"test",
+				"test_Avto64.o"
+			],
+			[
+				"n_de",
+				"n_destr\t(Avto.h)"
+			],
+			[
+				"n_",
+				"n_param\t(Avto.h)"
+			],
+			[
+				"pri",
+				"price"
+			],
+			[
+				"l",
+				"lib32/"
+			],
+			[
+				"STM",
+				"STM32_USB_Device_Library"
+			],
+			[
+				"e",
+				"endl"
+			],
+			[
+				"su",
+				"sumOf_sideDiog"
+			],
+			[
+				"la",
+				"lastMinNum_j"
+			],
+			[
+				"m",
+				"lastMinNum_I"
+			],
+			[
+				"arr",
+				"array_size"
+			],
+			[
+				"A",
+				"A"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.cpp",
+			"settings":
+			{
+				"buffer_size": 161,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mylist.h",
+			"settings":
+			{
+				"buffer_size": 453,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "databaseForStdu.sublime-project",
+			"settings":
+			{
+				"buffer_size": 911,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inst\t",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi"
+	],
+	"file_history":
+	[
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/databaseForStdu.sublime-project",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/myreacord.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/app.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/database.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/outputmanager.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/inputmanager.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudetsKursachi/myconteiner",
+		"/home/slavjan/Downloads/unetbootin-linux64-661.bin",
+		"/home/slavjan/otherThings/Dev/Code/CInLinux/TcpSrv/build_log.txt",
+		"/home/slavjan/.config/sublime-text-3/Packages/User/All Autocomplete.sublime-settings",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/avto.sublime-project",
+		"/usr/include/c++/7/ostream",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/Makefile",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/avto.cpp",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/test_Avto_64 (copy).o",
+		"/usr/include/c++/7/bits/locale_facets.h",
+		"/usr/include/c++/7/iostream",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/avto.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStdu/avto.hh",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/Makefile",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/sin868.sublime-project",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/.mxproject",
+		"/dev/ttyUSB0",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/Drivers/STM32F3xx_HAL_Driver/Inc/stm32f3xx_hal_gpio.h",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_hal_rcc.c",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/Src/main.c",
+		"/home/slavjan/otherThings/Dev/Code/STM32/sim868/startup_stm32f303xc.s",
+		"/home/slavjan/otherThings/Dev/Code/STM32/SM32sim868/sin868.sublime-project",
+		"/home/slavjan/.config/sublime-text-3/Packages/All Autocomplete/All Autocomplete.sublime-settings",
+		"/home/slavjan/.config/sublime-text-3/Packages/User/SublimeGDB.sublime-settings",
+		"/home/slavjan/.config/sublime-text-3/Packages/User/Terminal.sublime-settings",
+		"/home/slavjan/.config/sublime-text-3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/slavjan/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/slavjan/.config/sublime-text-3/Packages/User/SublimeAStyleFormatter.sublime-settings",
+		"/home/slavjan/.config/obs-studio/global.ini",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/Gorkovenko/arrays_sort.cpp",
+		"/home/slavjan/Downloads/Novy_textovy_dokument.txt",
+		"/home/slavjan/google-drive/labfor/Services/VLC 1.1.9/mcu-broadcast.bat",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/.gitignore",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/SvSh/seabattle/.gitignore",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/MCS51/ADuCUART/uart.c",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/MCS51/keybordAduc/keybordListen.c",
+		"/home/slavjan/google-drive/SibSUTIS/microADuc/ADuCUART/uart.c",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/борисов/lab2/blink.c",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/SvSh/seabattle.c",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/борисов/Mk/lab1/test1.LST",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/борисов/Mk/lab1/test1pro.hex",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/борисов/LH.v",
+		"/home/slavjan/otherThings/Dev/Code/SibSUTIS/борисов/Mk/lab1/test.c",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/SvetlanaShitikova/math.h",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/SvetlanaShitikova/math.c",
+		"/home/slavjan/otherThings/Dev/Code/lazyStudents/SvetlanaShitikova/main.c"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"SL.37.region_keys":
+							[
+							],
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "mylist.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								433,
+								433
+							]
+						],
+						"settings":
+						{
+							"SL.44.region_keys":
+							[
+							],
+							"auto_name": "",
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "databaseForStdu.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 911,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								426,
+								426
+							]
+						],
+						"settings":
+						{
+							"SL.46.region_keys":
+							[
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 120.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Makefile/Make.sublime-build",
+	"project": "sin868.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 304.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

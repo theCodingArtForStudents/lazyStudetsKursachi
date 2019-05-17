@@ -27,7 +27,6 @@
                 "include_dirs":
                 [
                     "/include/"
-                    "{projectDir}"
                 ],
                 // Дополнительные флаги Clang
                 // "extra_flags":"-DSTM32F10X_MD_VL"
