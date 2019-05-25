@@ -1,12 +1,8 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console c++17
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES = *.cpp
-SOURCES += *.h
+SOURCES = *.cpp \
 
-INCLUDEPATH = *.h
-
-
-
+HEADERS += *.h \
