@@ -18,9 +18,9 @@ enum fieldType
 };
 
 //typedef  std::variant<int, std::string, size_t, double> FieldData;
-typedef std::map<std::string, FieldData*> Field;
+typedef std::map<std::string, FieldData*> Raw;
 
-typedef std::vector<Field *> Record;
+typedef std::vector<Raw *> Record;
 
 typedef std::map<std::string, fieldType>  fieldsTypesMap;
 typedef std::map<fieldType, std::string>  fieldsNamesMap;
@@ -38,18 +38,22 @@ private:
   Record* create_record(const fieldsTypesStack &types,
                         const fieldsDataStack  &dataset);
 
-
+  Table();
 public:  
   Table(const fieldsTypesStack &fieldsTypes,
         const stringStack &fieldsNames);
-
+  ~Table();
 
   Table* push_back(const Record &newRecord);
   Table* push_back(const fieldsDataStack &dataSet);
 
-  static Field* create_field(const fieldType   &type = INTEGER,
-                             const std::string &name = "untitled");
+  static Raw* create_field(const fieldType   &type = INTEGER,
+                           const std::string &name = "untitled");
 
+  Raw* operator [](const size_t &index);
+
+  fieldsTypesMap *fieldsTypification() const;
+  fieldsNamesMap *fieldsTitling() const;
 };
 
 #endif // TABLE_H

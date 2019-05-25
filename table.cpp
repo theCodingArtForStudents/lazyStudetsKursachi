@@ -4,10 +4,10 @@
 //#include <ios>
 
 
-Field *Table::create_field(const fieldType &type,
-                           const std::string &name)
+Raw *Table::create_field(const fieldType &type,
+                         const std::string &name)
 {
-  Field *ftmp = new Field();
+  Raw *ftmp = new Raw();
 
   if( type == INTEGER )
     {
@@ -28,6 +28,21 @@ Field *Table::create_field(const fieldType &type,
   return ftmp;
 }
 
+Raw* Table::operator [](const size_t &index)
+{
+  return (*_records)[index];
+}
+
+fieldsTypesMap *Table::fieldsTypification() const
+{
+  return _fieldsTypification;
+}
+
+fieldsNamesMap *Table::fieldsTitling() const
+{
+  return _fieldsTitling;
+}
+
 Table::Table(const fieldsTypesStack &fieldsTypes,
              const stringStack      &fieldsNames)
 {
@@ -37,6 +52,18 @@ Table::Table(const fieldsTypesStack &fieldsTypes,
     {
       (*_fieldsTypification)[fieldsNames.top()] = fieldsTypes.top();
       (*_fieldsTitling)[fieldsTypes.top()] = fieldsNames.top();
+    }
+}
+
+Table::~Table()
+{
+  if( _records != nullptr ){
+      for( auto rec : (*_records)){
+          if( rec != nullptr )
+            rec->clear();
+          delete rec;
+        }
+      delete [] _records;
     }
 }
 
@@ -55,7 +82,7 @@ Table *Table::push_back(const fieldsDataStack &dataSet)
   if( _records == nullptr )
     _records = new Record();
 
-  Field *tmp = (*_records).back();
+  Raw *tmp = (*_records).back();
   for(auto&& [name, value]: *tmp)
     {
       if( value == nullptr )
