@@ -5,9 +5,12 @@
 class FieldData
 {
 public:
-  FieldData();
-  virtual ~FieldData();
-  virtual FieldData* operator =(void*);
+  FieldData(){}
+
+  ~FieldData(){}
+
+  template<typename T>
+  FieldData* operator =(const T &value){ return this; }
 };
 
 #endif // FIELDDATA_H

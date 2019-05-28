@@ -18,7 +18,11 @@ enum fieldType
 };
 
 //typedef  std::variant<int, std::string, size_t, double> FieldData;
-typedef std::map<std::string, FieldData*> Raw;
+typedef std::map<std::string, FieldData> Raw;
+
+//template  <typename T> typedef std::map<std::string, T> mypair;
+
+ //mypair PaitType;
 
 typedef std::vector<Raw *> Record;
 
@@ -35,25 +39,38 @@ private:
   Record* _records = nullptr;
   fieldsTypesMap *_fieldsTypification = nullptr;
   fieldsNamesMap *_fieldsTitling = nullptr;
+  bool _isEmpty = true;
+
   Record* create_record(const fieldsTypesStack &types,
                         const fieldsDataStack  &dataset);
 
-  Table();
+//  mypair _pair;
+
 public:  
-  Table(const fieldsTypesStack &fieldsTypes,
-        const stringStack &fieldsNames);
+  Table(){}
+  Table(fieldsTypesStack &fieldsTypes,
+        stringStack &fieldsNames);
+  Table(Table* newTable);
   ~Table();
 
   Table* push_back(const Record &newRecord);
-  Table* push_back(const fieldsDataStack &dataSet);
+  Table* push_back(fieldsDataStack &dataSet);
+  Table* pop();
+  Table* erase();
+  Table* clear();
+
+
+
 
   static Raw* create_field(const fieldType   &type = INTEGER,
                            const std::string &name = "untitled");
 
   Raw* operator [](const size_t &index);
+//  Table* operator =(Table* )
 
   fieldsTypesMap *fieldsTypification() const;
   fieldsNamesMap *fieldsTitling() const;
+  bool isEmpty();
 };
 
 #endif // TABLE_H

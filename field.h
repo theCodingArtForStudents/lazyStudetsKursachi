@@ -3,16 +3,45 @@
 
 #include "fielddata.h"
 
+#include <cstring>
+#include <malloc.h>
+
 template <typename T>
 class FieldType : public FieldData
 {
-  T* _data = nullptr;
+  T _data;
 public:
-  FieldType();
-  FieldType(const T& _value);
-  FieldType<T> operator =(const T &value) override;
+//  FieldType();
+  FieldType<T>() : FieldData ()
+  {
 
-  ~FieldType() override;
+  }
+  template <typename U>
+  FieldType(const U& value)
+  {
+    _data = value;
+  }
+  FieldType(T* value)
+  {
+    _data = value;
+  }
+
+  FieldType<T>* operator =(const T &value)
+  {
+    if( _data != nullptr )
+      ~FieldType();
+    FieldType();
+
+    *_data = value;
+        // = value;
+
+    return this;
+  }
+
+  ~FieldType()
+  {
+
+  }
 };
 
 #endif // FIELD_H

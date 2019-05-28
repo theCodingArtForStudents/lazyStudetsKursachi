@@ -15,6 +15,7 @@ Raw *Table::create_field(const fieldType &type,
     }
   else if( type == STRING )
     {
+//      FieldType<std::string> sFtmp;
       (*ftmp)[name] = new FieldType<std::string>();
     }
   else if ( type == COUNTER )
@@ -23,6 +24,7 @@ Raw *Table::create_field(const fieldType &type,
     }
   else if ( type == DOUBLE )
     {
+
       (*ftmp)[name] = new FieldType<double>();
     }
   return ftmp;
@@ -43,8 +45,15 @@ fieldsNamesMap *Table::fieldsTitling() const
   return _fieldsTitling;
 }
 
-Table::Table(const fieldsTypesStack &fieldsTypes,
-             const stringStack      &fieldsNames)
+bool Table::isEmpty()
+{
+  _isEmpty = _records == nullptr
+           && _records->empty();
+  return _isEmpty;
+}
+
+Table::Table(fieldsTypesStack &fieldsTypes,
+             stringStack      &fieldsNames)
 {
   _fieldsTypification = new fieldsTypesMap();
   _fieldsTitling = new fieldsNamesMap();
@@ -52,19 +61,25 @@ Table::Table(const fieldsTypesStack &fieldsTypes,
     {
       (*_fieldsTypification)[fieldsNames.top()] = fieldsTypes.top();
       (*_fieldsTitling)[fieldsTypes.top()] = fieldsNames.top();
+
+      fieldsNames.pop();
+      fieldsTypes.pop();
     }
+}
+
+Table::Table(Table *newTable)
+{
+  clear();
+  _records = newTable->_records;
+  _fieldsTitling = newTable->_fieldsTitling;
+  _fieldsTypification = newTable->_fieldsTypification;
+
+  isEmpty();
 }
 
 Table::~Table()
 {
-  if( _records != nullptr ){
-      for( auto rec : (*_records)){
-          if( rec != nullptr )
-            rec->clear();
-          delete rec;
-        }
-      delete [] _records;
-    }
+  clear();
 }
 
 Table *Table::push_back(const Record &newRecord)
@@ -77,19 +92,50 @@ Table *Table::push_back(const Record &newRecord)
   return this;
 }
 
-Table *Table::push_back(const fieldsDataStack &dataSet)
+Table *Table::push_back(fieldsDataStack &dataSet)
 {
   if( _records == nullptr )
     _records = new Record();
 
-  Raw *tmp = (*_records).back();
-  for(auto&& [name, value]: *tmp)
+//  Raw *tmp = (*_records).back();
+  for(auto&& [name, value]: *(*_records).back())
     {
-      if( value == nullptr )
-        *value = create_field((*_fieldsTypification)[name], name);
+//      if( &value == nullptr )
+        value = create_field((*_fieldsTypification)[name], name);
 
-      *value = dataSet.top();
+        value = dataSet.top();
     }
 
   return this;
 }
+
+Table *Table::erase()
+{
+  if( _records != nullptr )
+    {
+      for( auto raw : *_records )
+        {
+          if( raw != nullptr )
+            raw->clear();
+        }
+      _records->clear();
+    }
+  return this;
+}
+
+Table *Table::clear()
+{
+  if( _fieldsTitling != nullptr )
+    {
+      _fieldsTitling->clear();
+      delete _fieldsTitling;
+    }
+  if( _fieldsTypification != nullptr )
+    {
+      _fieldsTypification->clear();
+      delete _fieldsTypification;
+    }
+  return erase();
+}
+
+
