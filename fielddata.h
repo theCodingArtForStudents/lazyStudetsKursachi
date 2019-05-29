@@ -10,7 +10,11 @@ public:
   ~FieldData(){}
 
   template<typename T>
-  FieldData* operator =(const T &value){ return this; }
+  FieldData& operator =(const T &value){ return *this; }
+
+
+
+
 };
 
 #endif // FIELDDATA_H

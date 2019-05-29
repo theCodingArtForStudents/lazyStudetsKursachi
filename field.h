@@ -5,6 +5,7 @@
 
 #include <cstring>
 #include <malloc.h>
+#include<iostream>
 
 template <typename T>
 class FieldType : public FieldData
@@ -13,35 +14,55 @@ class FieldType : public FieldData
 public:
 //  FieldType();
   FieldType<T>() : FieldData ()
-  {
+  {}
 
-  }
-  template <typename U>
-  FieldType(const U& value)
+  FieldType(const FieldType<T>& other)
   {
-    _data = value;
+    _data = other._data;
   }
+
   FieldType(T* value)
   {
     _data = value;
   }
 
-  FieldType<T>* operator =(const T &value)
-  {
-    if( _data != nullptr )
-      ~FieldType();
-    FieldType();
+  T& operator =(const FieldType<T>& obj);
+  FieldType<T> &operator =(const T& value);
 
-    *_data = value;
-        // = value;
-
-    return this;
-  }
+  friend std::ostream& operator <<(std::ostream& out, const FieldType<T>& obj);
+  friend std::istream &operator >>(std::istream& in, const FieldType<T>& obj);
 
   ~FieldType()
-  {
+  {}
 
-  }
 };
 
+
+
 #endif // FIELD_H
+
+template<typename T>
+std::ostream &operator <<(std::ostream& out, const FieldType<T> &obj)
+{
+  return out = obj._data;
+}
+
+template<typename T>
+std::istream& operator >>(std::istream &in, const FieldType<T>& obj)
+{
+  obj._data = in;
+  return in;
+}
+
+template <typename T>
+T& FieldType<T>::operator =(const FieldType<T>& obj)
+{
+  return obj._data;
+}
+
+template<typename T>
+FieldType<T> &FieldType<T>::operator =(const T &value)
+{
+  _data = value;
+  return *this;
+}
