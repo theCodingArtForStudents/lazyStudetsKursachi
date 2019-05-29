@@ -5,7 +5,10 @@
 class ActionType
 {
 public:
-  ActionType();
+  ActionType(){}
+  virtual ~ActionType();
+
+  virtual void native_action();
 };
 
 #endif // ACTIONTYPE_H
